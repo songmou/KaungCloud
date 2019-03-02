@@ -1,0 +1,50 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/{url}", //下游服务的访问路径
+      "DownstreamScheme": "http", //下游服务是http还是https
+      "DownstreamHostAndPorts": [ //下游服务的地址以及端口号
+        {
+          "Host": "localhost", //下游服务的地址
+          "Port": "9001" //下游服务的端口号
+        }
+        //,{
+        //  "Host": "127.0.0.1", //下游服务的地址
+        //  "Port": "9001" //下游服务的端口号
+        //}
+      ],
+      "UpstreamPathTemplate": "/oauth2/{url}", //上游服务的访问路径
+      "UpstreamHttpMethod": [ "GET", "POST" ] //上游服务的访问模式，本例里只用到了POST
+    }
+    //,{
+    //  "DownstreamPathTemplate": "/{url}",
+    //  "DownstreamScheme": "http",
+    //  "UpstreamPathTemplate": "/{url}",
+    //  "ServiceName": "Kaung.Cloud.Gateway",
+    //  "UpstreamHttpMethod": [ "Get" ],
+    //  "QoSOptions": {
+    //    "ExceptionsAllowedBeforeBreaking": 3,
+    //    "DurationOfBreak": 10000,
+    //    "TimeoutValue": 5000
+    //  },
+    //  "FileCacheOptions": { "TtlSeconds": 15 }
+    //}
+
+    //,{
+    //  "DownstreamPathTemplate": "/api/Counter/Count",
+    //  "DownstreamScheme": "http",
+    //  "UpstreamPathTemplate": "/count",
+    //  "UpstreamHttpMethod": [ "Get" ],
+    //  "ServiceName": "Kaung.Cloud.Gateway",
+    //  "LoadBalancer": "RoundRobin",//负载均衡类型:RoundRobin 轮询机制,LeastConnection 最少连接数,NoLoadBalancer 不使用负载均衡使用第一个服务
+    //  "UseServiceDiscovery": true
+    //}
+  ]
+  //,"GlobalConfiguration": {
+  //  "ServiceDiscoveryProvider": {
+  //    "Host": "localhost", // Consul Service IP
+  //    "Port": 8500, // Consul Service Port
+  //    "Type": "Consul"
+  //  }
+  //}
+}

@@ -1,0 +1,41 @@
+
+Ocelot + Consul + Registrator 基于Docker 实现服务发现、服务自动注册：
+https://www.cnblogs.com/zhangdk/p/ms1.html
+
+.NET Core微服务之基于Consul实现服务治理
+https://www.cnblogs.com/edisonchou/p/9124985.html
+
+Ocelot简易教程（三）之主要特性及路由详解
+https://blog.csdn.net/qin_yu_2010/article/details/82749414
+
+
+---------------------------------------------------------------------------------
+Consul接口地址：https://www.consul.io/docs/agent/watches.html
+
+例如：
+1、获取所有注册的Consul子服务：
+http://localhost:8500/v1/catalog/nodes
+
+2、获取某一个服务的信息
+http://localhost:8500/v1/catalog/service/Kaung.Cloud.Gateway
+
+3、获取某一个服务的信息
+http://localhost:8500/v1/health/service/Kaung.Cloud.Gateway
+
+等
+---------------------------------------------------------------------------------
+与SpringCloud不同的是，Ocelot没有自动注册的服务。需要手动配置consul的服务文件。
+
+实例：在consul所在的目录下创建文件夹 consul.d（文件夹位置及文件夹名称可以随意），进入consul.d文件夹中创建两个json文件 service_1.json 和 service_2.json,输入个格式为：
+{
+  "service": {
+    "id": "Kaung.Cloud.Gateway.01",
+    "name": "Kaung.Cloud.Gateway",
+    "tags": [ "dev" ],
+    "address": "localhost",
+    "port": 9000
+  }
+}
+使用 Ctrl+C 关闭正在运行的consul，然后输入改命令运行consul：
+consul agent -dev -config-dir=D:\Surface\Sources\KaungCloud\doc\consul.d
+----------------------------------------------------------------------------------

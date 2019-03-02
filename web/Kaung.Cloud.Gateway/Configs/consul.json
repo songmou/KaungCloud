@@ -1,0 +1,11 @@
+{
+  "Service": {
+    "Name": "Kaung.Cloud.Gateway",
+    "IP": "localhost",
+    "Port": "9000"
+  },
+  "Consul": {
+    "IP": "localhost",
+    "Port": "8500"
+  }
+}
