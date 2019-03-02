@@ -6,6 +6,11 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E6D74637-3F61-4971-BD3F-FDF03A1ED54B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{AC00B171-B494-4A99-8B32-B5257FE5B9DA}"
+	ProjectSection(SolutionItems) = preProject
+		doc\consul.exe = doc\consul.exe
+		README.md = README.md
+		doc\REMARK.txt = doc\REMARK.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{98106682-4170-4DFF-A4C5-642D01A092E0}"
 EndProject
@@ -17,15 +22,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utility", "Utility", "{9DA2EA6E-ABAA-46AB-A89B-4DCA40BA91D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Util", "core\Framework.Util\Framework.Util.csproj", "{FC53C642-ED15-4AF6-886A-C82F5C9EAB79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Util", "core\Framework.Util\Framework.Util.csproj", "{FC53C642-ED15-4AF6-886A-C82F5C9EAB79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Util.Log4net", "core\Framework.Util.Log4net\Framework.Util.Log4net.csproj", "{B43EF54E-3A15-4752-874E-0C2787A31C1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Util.Log4net", "core\Framework.Util.Log4net\Framework.Util.Log4net.csproj", "{B43EF54E-3A15-4752-874E-0C2787A31C1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Core", "core\Framework.Core\Framework.Core.csproj", "{A438715C-8029-4BEA-A369-C842CCC06A72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Core", "core\Framework.Core\Framework.Core.csproj", "{A438715C-8029-4BEA-A369-C842CCC06A72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kaung.Cloud.Gateway", "web\Kaung.Cloud.Gateway\Kaung.Cloud.Gateway.csproj", "{093762EC-BAB2-415B-94D3-2C1927D9E97C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kaung.Cloud.Gateway", "web\Kaung.Cloud.Gateway\Kaung.Cloud.Gateway.csproj", "{093762EC-BAB2-415B-94D3-2C1927D9E97C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kaung.Cloud.OAuth2", "web\Kaung.Cloud.OAuth2\Kaung.Cloud.OAuth2.csproj", "{021E1A7C-07FE-40B8-8A3D-B801EF7899CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kaung.Cloud.OAuth2", "web\Kaung.Cloud.OAuth2\Kaung.Cloud.OAuth2.csproj", "{021E1A7C-07FE-40B8-8A3D-B801EF7899CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
